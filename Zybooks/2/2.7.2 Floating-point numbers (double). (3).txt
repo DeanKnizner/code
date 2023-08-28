@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Sphere {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      double radius;
+      double area;
+      
+      radius = scnr.nextDouble();
+      
+      area = 4.0 * Math.PI * radius * radius;
+      System.out.printf("Radius is %.4f\n", radius);
+      System.out.printf("Surface area is %.5f\n", area);
+
+   }
+}

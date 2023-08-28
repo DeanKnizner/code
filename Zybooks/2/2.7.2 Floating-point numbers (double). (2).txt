@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Polynomial {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+
+      double v;
+      double q;
+      
+      v = scnr.nextDouble();
+      
+      q = (3.5 * v * v) - (10.0 * v) - 8.5;
+
+      System.out.printf("%.3f\n", q);
+   }
+}
