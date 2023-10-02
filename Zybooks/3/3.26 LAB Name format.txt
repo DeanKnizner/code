@@ -1,0 +1,22 @@
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+ Scanner input = new Scanner(System.in);
+        String fullName = input.nextLine();
+        
+        String[] nameParts = fullName.split(" ");
+        String lastName = nameParts[nameParts.length - 1];
+        String firstInitial = nameParts[0].substring(0, 1);
+        
+        if (nameParts.length == 3) {
+            String middleInitial = nameParts[1].substring(0, 1);
+            System.out.println(lastName + ", " + firstInitial + "." + middleInitial + ".");
+        } else {
+            System.out.println(lastName + ", " + firstInitial + ".");
+        }
+        
+        input.close();
+   }
+}
+

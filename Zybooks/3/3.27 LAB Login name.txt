@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class LabProgram {
+
+	public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+
+
+        String firstName = input.next();
+
+
+        String lastName = input.next();
+
+
+        int number = input.nextInt();
+
+        String loginName = generateLoginName(firstName, lastName, number);
+
+        System.out.println("Your login name: " + loginName);
+
+        input.close();
+    }
+
+    public static String generateLoginName(String firstName, String lastName, int number) {
+        String loginName = "";
+
+        if (firstName.length() >= 6) {
+            loginName = firstName.substring(0, 6);
+        } else {
+            loginName = firstName;
+        }
+
+        loginName += lastName.charAt(0) + "_" + (number % 10);
+
+        return loginName;
+
+	}
+}
+
